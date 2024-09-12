@@ -24,7 +24,13 @@
 
 * tree
 
-會紀錄檔名，也就是新增的檔案
+會紀錄檔名，也就是新增的檔案，同樣以此repo為例
+
+     git cat-file -t 365a
+     >>> tree 
+
+     git cat-file -p 365a
+     >>> 100644 blob c973c052390993246eb6898054f50d8e37687b71    readme.md
 
 * commit
 
