@@ -51,4 +51,11 @@
 
 # Commit message 應該怎麼寫比較好？應該有什麼 style 嗎？
 
-我認為commit message基本上就是寫你這次commit所做的事情，以我的個人經驗來說，通常一個commit來說，我不會新增超過三個檔案，這樣之後有問題的話trace back會比較方便一點。至於style方面，如果能夠有issue的編號當作參考會更方便了解這個commit在做的事情
+我認為commit message基本上就是寫你這次commit所做的事情，以我的個人經驗來說，通常一個commit message不會新增超過三個檔案，這樣之後有問題的話trace back會比較方便一點。但如果這次的 commit (不超過三個檔案) 是會讓團隊夥伴 pull 下來後，系統是壞掉的該如何處理？我的方法會是額外開個feature branch去進行修改。至於style方面，如果能夠有issue的編號當作參考會更方便了解這個commit在做的事情
+
+同時，根據Angular Git commit message guidelines，撰寫commit message最好要有以下的東西
+
+1. Type:代表commit類別，有包含feat, fix, docs, style, refactor, test, chore
+2. Subject:不應超過50個字元，若用英文書寫則需大寫開頭，中英文都不用句號結尾。
+3. Body:只要是說明改了什麼東西以及更改的目的。最多72個字，過多文字的話自行斷行，否則terminal或github顯示的時候會難以閱讀
+4. Footer:非必要，但通常，但通常是拿來標註issue的編號
