@@ -46,8 +46,32 @@
 
 # 紀錄在 git repo 操作過程中，.git 檔案夾裡的變化，看看你可以觀察到什麼
 
-一般來說，最主要的變化會是在.git directory裡面的log資料夾還有objects資料夾，log資料夾裡面會有commit的歷史記錄，objects則會紀錄相關檔案的變化
+.git檔案夾有包含以下檔案或檔案夾
 
+1. objects/
+* 有包含blob, tree, commit，這些東西都會有一個sha-1的hash value當作唯一的識別
+* 執行 git add時，變更的檔案會儲存在objects
+* 執行 git commit時，git會將commit message、檔案等東西存入objects
+2. refs/
+* 儲存分支(branch)和標籤(tag)指向。refs/heads/中的檔案對應指向分支最新提交commit的hash value。
+* refs/tags紀錄該tag對應的commit
+3. HEAD
+* 指向目前分支，當切換分支時，HEAD會更新並指向新的分支或commit
+4. index
+* 會儲存staging are的東西(類似快取)
+* 會紀錄要被staged以及準備要commit的檔案
+5. logs/
+* 紀錄所有分支的變更紀錄，在logs/refs/heads/當中會紀錄每個分支的歷史資訊，當 commit, merge或reset的時候也會紀錄
+6. config
+* git相關設定，像是使用者資訊
+7. packed-refs
+* 當repo有太多branch或tag時，用packed-refs可以提升效率
+8. description
+* 給Gitweb來描述這個repo
+9. hooks
+* 客製化條件觸發腳本的規則，hooks script是用來跑一些簡單的CI任務(如pre-commit)
+10. info/
+* 裡面有exclude的檔案的檔案追蹤不需要被加入到git的檔案
 
 # Commit message 應該怎麼寫比較好？應該有什麼 style 嗎？
 
