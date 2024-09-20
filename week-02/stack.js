@@ -46,7 +46,7 @@ export default class Stack {
   // 清空 stack 
   clear() {
     // TODO
-    this.#items=[]
+    this.#items=[];
   }
 
   // 印出 stack 內容
