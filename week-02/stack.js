@@ -2,7 +2,7 @@
 // 完成以下 TODO 的部分，並且以 Module 的方式匯出 (ESM)
 export default class Stack {
 	// TODO: # 有特別的意思嗎？請以註解回覆。
-  #items; // #帶表示private的意思，在物件
+  #items; // #帶表示private的意思，在物件導向中private只能在這個類別裡面被access，不能直接被子類別或在這個類別外被修改
 
   constructor() {
     this.#items = [];
