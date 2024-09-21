@@ -30,4 +30,7 @@ v20.17
 >>(5)執行每個套件的 install
 >>>檔案全部都寫入到 node_modules 後，npm會執行所有套件的npm install，讓套件本身的dependency被正確的連結到下載的套件上  
 * nvm (Node Version Manager)  
-管理node.js版本的工具，因為不同的專案可能會用到不同的node.js版本，不同的node.js版本可能也會因此影響到npm
+管理node.js版本的工具，因為不同的專案可能會用到不同的node.js版本，不同的node.js版本可能也會因此影響到npm，以下為常用指令  
+>>1. 下載指定版本的node.js: ```nvm install [node.js 版本號]```  
+>>2. 切換node.js版本: ```nvm use [node.js 版本號]```  
+>>3. 察看目前使用版本: ```nvm current```
