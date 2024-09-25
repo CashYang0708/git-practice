@@ -22,13 +22,14 @@ export default class Stack {
     } else {
       console.log("The stack is empty!");
     }
+    console.log(this.peek());
   }
 
   // 回傳 stack 頂部的元素，但不移除它
   peek() {
     // TODO
     if (this.isEmpty()) {
-      console.log("The stack is Empty");
+      console.log("The stack is empty!");
       return null;
     }
     return this.#items[this.size() - 1];
