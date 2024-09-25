@@ -28,7 +28,10 @@ export default class Stack {
   // 回傳 stack 頂部的元素，但不移除它
   peek() {
     // TODO
-    return this.#items[this.size()-1];
+    if(this.isEmpty()){
+      console.log("The stack is Empty");
+    }
+    return this.#items[this.#items.length-1];
   }
 
   // 檢查 stack 是否為空
