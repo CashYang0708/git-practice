@@ -32,7 +32,7 @@ export default class Stack {
       console.log("The stack is Empty");
       return null;
     }
-    return this.#items[this.#items.length-1];
+    return this.#items[this.size()-1];
   }
 
   // 檢查 stack 是否為空
