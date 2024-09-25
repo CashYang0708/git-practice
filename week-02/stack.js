@@ -30,6 +30,7 @@ export default class Stack {
     // TODO
     if(this.isEmpty()){
       console.log("The stack is Empty");
+      return null;
     }
     return this.#items[this.#items.length-1];
   }
