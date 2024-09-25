@@ -1,17 +1,20 @@
 // ary: number array
 function sum(ary) {
-	let s=0;
-    ary.forEach(element => {
-        s+=element;
-    });
-    return s;
+  let s = 0;
+  ary.forEach((element) => {
+    s += element;
+  });
+  return s;
 }
 
 console.log(sum([1, 5, 3, 2])); // 11
 
-function sum(ary){
-    let s=ary.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-    return s;
+function sum(ary) {
+  let s = ary.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
+  return s;
 }
 console.log(sum([1, 5, 3, 2])); // 11
 

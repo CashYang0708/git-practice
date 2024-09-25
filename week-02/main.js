@@ -1,6 +1,6 @@
 // main.js
 // TODO 以 Module 的方式匯入，例如:
-import Stack from './stack.js';
+import Stack from "./stack.js";
 
 let stack = new Stack();
 stack.print();
