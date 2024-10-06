@@ -7,7 +7,7 @@
 3. 什麼是 Nginx？有哪些用途與特性？
    除了當作一般的 web server 之外，還可以當作反向代理、HTTP cache、load balancer，可以當作 apache 的強化版，nginx 跟 pache 比對於高流量的處理更為快速。
    - HTTP:作為靜態內容（如 HTML、CSS、JavaScript、圖片等）的網頁伺服器，並處理 HTTP request
-   - Load balancer:流量分配給多台後端伺服器，使用 round-robin、least connection
+   - Load balancer:流量分配給多台後端伺服器，使用 round-robin、least-connected
    - reverse proxy:在 client 和 origin server 中間，由 reverse proxy server 代替 origin server，回應 client 的 request
 4. pm2 套件是什麼？有什麼用處？(如果不是使用 pm2，那就告訴我你是用哪一個、這個工具的用途，以及，你為什麼這樣選擇)
    - pm 為 process manager 的意思，pm2 可以讓開發者在伺服器上運行、監控、管理和維護 Node.js 的 application，除此之外，使用 pm2 可以讓 node.js 的 project 在背景當中一直持續執行(除非你把它關掉)。
