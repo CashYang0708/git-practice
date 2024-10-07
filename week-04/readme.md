@@ -41,7 +41,7 @@ server {
                 proxy_set_header Host $host;
         }
     }
-...後面省略
+...#後面省略
 ```
 
 7. Security Group 是什麼？用途為何？有什麼設定原則嗎？
