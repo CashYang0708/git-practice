@@ -21,10 +21,10 @@
    - load balance:如果有多個 Express 在運行，Nginx 可以作為 load balancer 來分配來自 client 端的請求，將它們轉發到不同的 Express，從而提高擴展性和可用性。
    - 安全性:reverse proxy，可以隱藏 Express 實際運作的細節，保護其免受外部攻擊。client 只會與 Nginx 溝通，Nginx 將內部的 Express 隱藏來減少攻擊面。
 
-6. 提供步驟 9 的 Nginx 設定檔  
-   設定的檔案在/etc/nginx/sites-available/default
+6. 提供步驟 9 的 Nginx 設定檔
 
 ```
+... #前面省略
 server {
         listen 80 default_server;
         listen [::]:80 default_server;
@@ -41,6 +41,7 @@ server {
                 proxy_set_header Host $host;
         }
     }
+...後面省略
 ```
 
 7. Security Group 是什麼？用途為何？有什麼設定原則嗎？
