@@ -90,7 +90,7 @@ server {
     - 解決方案:
 
       ```bash
-      lsof -i:[被佔用的port] #查看哪個porcess使用此port
+      lsof -i:[被佔用的port] #查看哪個process使用此port
       ```
 
       ```bash
